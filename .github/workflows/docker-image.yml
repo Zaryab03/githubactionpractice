@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag jason:v2
+      run: docker build . --file Dockerfile --tag jason:v1
 
     - name: Checking version
       run: |
@@ -25,6 +25,6 @@ jobs:
       run: |
         docker ps -a
         
-     - name: Checking docker images
+    - name: Checking docker images
       run: |
         docker images
